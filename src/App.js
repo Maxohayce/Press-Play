@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <Router>
         <Toolbar />
-        <SideDrawer />
+        {/* <SideDrawer /> */}
         
         <Switch>
           <Route exact path='/' >

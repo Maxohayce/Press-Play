@@ -2,3 +2,8 @@ li {
     display: inline-block;
     margin: 20px;
 }
+
+li:hover {
+    background-color: #ddd;
+    color: black;
+}
