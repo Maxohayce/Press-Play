@@ -1,9 +1,5 @@
 li {
-    display: inline-block;
-    margin: 20px;
+    display: inline-flex;
+    align-items: center;
 }
 
-li:hover {
-    background-color: #ddd;
-    color: black;
-}

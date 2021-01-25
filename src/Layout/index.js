@@ -4,11 +4,18 @@ import Toolbar from './Toolbar/Toolbar'
 import Footer from './Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
 
+import  classes from './layout.css';
+
 const Layout = (props) => (
     <div>
-        <main>
+        <Toolbar />
+        <SideDrawer />
+
+        
+        <main className={classes.Content}>
             {props.children}
         </main>
+        <Footer />
     </div>
 );
 

@@ -1,17 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Toolbar, SideDrawer, Footer } from './Layout/index';
+// import { Toolbar, SideDrawer, Footer } from './Layout/index';
 import { Home, CreateYours, About, Listen } from './components/index';
 
 
 
 class App extends React.Component {
 
+  exploreHandler = () => {
+    
+  }
+
   render() {
     return (
       <Router>
-        <Toolbar />
+        {/* <Toolbar /> */}
         {/* <SideDrawer /> */}
         
         <Switch>
@@ -30,7 +34,7 @@ class App extends React.Component {
 
         </Switch>
 
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     );
   }

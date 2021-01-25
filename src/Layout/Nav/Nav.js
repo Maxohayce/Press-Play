@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavItem from './NavItem/NavItem';
-import classes from './Nav.css';
+import './Nav.css';
 
 const navs = [
     { path: '/', name: 'Home' },
@@ -11,7 +11,7 @@ const navs = [
 ]
 
 const Nav = (props) => (
-        <ul className={classes.navItems}>
+        <ul className="navItems">
             {navs.map((navItem, i) => (
                 <NavItem exact key={i} path={navItem.path}>{navItem.name}</NavItem>
             ))}
