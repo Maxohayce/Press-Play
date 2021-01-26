@@ -3,6 +3,7 @@ import { Layout } from '../../Layout/index';
 import Button from '../../UI/Button/Button';
 import Card from '../../UI/Card/Card';
 
+import Firefox from '../../images/firefox.png';
 import Auba from '../../images/auba.png';
 import Crad from '../../images/crad.png';
 import Crypto from '../../images/crypto.png';
@@ -30,20 +31,28 @@ const Home = () => (
         </section>
         <section>
             <h4>Most Popular Topics</h4>
-            <span>
-                <i fa>Headlines</i>
-                <i fa>Politics</i>
-                <i>Relationships</i>
-                <i>Money</i>
-            </span>
+            <div className="Icons">
+                <span >
+                    <i className="fa fa-th"></i><p>Headlines</p>
+                </span>
+                <span >
+                    <i className="fa fa-thumbs-up"></i><p>Politics</p>
+                </span>
+                <span ><i className="fa fa-heart"></i><p>Relationships</p></span>
+                <span ><i className="fa fa-dollar"></i><p>Money</p></span>
+            </div>
         </section>
         <section>
             <h4>Top Podcast</h4>
-            <div className="">
+            <div className="Cards">
                 {cards.map((card, i) => (
                     <Card key={i} image={card.image} episode={card.episode} time={card.time} title={card.title}/>
                 ))}
             </div>
+        </section>
+        <section className="About">
+            <h4>See how press play works</h4>
+            <img className="aboutImage"src={Firefox} alt="learn"/>
         </section>
     </Layout>
 );

@@ -16,12 +16,12 @@
 nav {
     height: 100%;
     display: inline-flex;
-    width: 75%;
+    width: 80%;
 }
 
 form {
     display: flex;
-    width: 40%;
+    width: 30%;
     margin-left: 50px;
     padding: 10px;
 }

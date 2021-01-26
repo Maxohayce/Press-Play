@@ -27,8 +27,51 @@ h1 {
     color: #fff;
 }
 
+section {
+    margin: auto;
+    align-content: center;
+    /* padding: 20px; */
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+}
+
+.Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .Button {
     display: flex;
     justify-content: space-around;
+}
+
+.Cards {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin-left: 2.5%;
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffa500;
+    margin: 4% 0;
+}
+
+.aboutImage {
+    width: 60%;
+    margin: auto;
+    outline: none;
+    padding-bottom: 2%;
 }
 
