@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     height: 30vh;
+    top: 10%;
 }
 
 .FooterNav {

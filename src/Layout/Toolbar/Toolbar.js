@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../components/Logo/Logo';
 import Nav from '../Nav/Nav';
-import Button from '../../UI/Button/Button';
+import Button from '../../components/Button/Button';
 
 import classes from './Toolbar.module.css';
 
