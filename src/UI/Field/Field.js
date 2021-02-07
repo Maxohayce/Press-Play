@@ -1,9 +1,8 @@
-import React from "react";
 import Input from "../../components/Input/Input";
 
 import classes from "./Field.css";
 
-const Field = ({name, elementType, elementConfig, value, label}) => {
+const Field = ({name, elementType, elementConfig, value, label, onChange}) => {
   let inputElement = null;
   let placeholder=`Enter your ${name}`;
 
@@ -24,6 +23,7 @@ const Field = ({name, elementType, elementConfig, value, label}) => {
           elementConfig={elementConfig}
           value={value}
           placeholder={placeholder}
+          onChange={onChange}
         />
       );
   }
