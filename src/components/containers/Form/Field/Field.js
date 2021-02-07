@@ -1,4 +1,4 @@
-import Input from "../../components/Input/Input";
+import Input from "../../../presentational/Input/Input";
 
 import classes from "./Field.css";
 

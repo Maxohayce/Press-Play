@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pressPlay from '../../images/press-play.svg';
+import pressPlay from '../../../assets/images/press-play.svg';
 import classes from './Logo.css';
 
 const logo = (props) => (

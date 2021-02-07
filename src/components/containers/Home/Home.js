@@ -1,13 +1,13 @@
 import React from 'react';
-import { Layout } from '../../Layout/index';
-import Button from '../../components/Button/Button';
-import Card from '../../components/Card/Card';
-import Icon from '../../components/Fontawesome/Icon';
+import { Layout } from '../../presentational/Layout/index';
+import Button from '../../presentational/Button/Button';
+import Card from '../../presentational/Card/Card';
+import Icon from '../../presentational/Fontawesome/Icon';
 
-import Firefox from '../../images/firefox.png';
-import Banner from '../../images/banner.png';
-import Engage from '../../images/Engage.png';
-import Engage1 from '../../images/Engage-bottom.png';
+import Firefox from '../../../assets/images/firefox.png';
+import Banner from '../../../assets/images/banner.png';
+import Engage from '../../../assets/images/Engage.png';
+import Engage1 from '../../../assets/images/Engage-bottom.png';
 
 import classes from './Home.module.css';
 

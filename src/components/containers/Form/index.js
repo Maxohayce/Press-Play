@@ -1,24 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Field from "./Field/Field";
 
 const Form = ({ title, fields, buttons, alternate, onSubmit }) => {
+  const [fieldInputs, setFieldInputs] = useState({});
+
   const submit = (e) => {
     e.preventDefault();
-    onSubmit();
+    onSubmit(fieldInputs);
   };
 
   return (
     <form onSubmit={submit}>
       {title}
 
-      {fields.map(({ id, elementType, label, name, onChange, value }) => (
+      {fields.map(({ id, elementType, label, name }) => (
         <Field
           key={id}
           elementType={elementType}
           label={label}
           name={name}
-          onChange={(e) => onChange(e.target.value)}
-          value={value}
+          onChange={(e) => setFieldInputs({...fieldInputs, [name]: e.target.value})}
+          value={fieldInputs[name] || ''}
         />
       ))}
 

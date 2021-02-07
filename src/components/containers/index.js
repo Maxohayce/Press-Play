@@ -1,5 +1,5 @@
 import Home from './Home/Home';
-import CreateYours from '../components/CreateYours/CreateYours';
+import CreateYours from '../presentational/CreateYours/CreateYours';
 import About from './About/About';
 import Listen from './Listen/Listen';
 

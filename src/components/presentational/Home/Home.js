@@ -1,13 +1,13 @@
 import React from "react";
-import { Layout } from "../../Layout/index";
-import Button from "../../UI/Button/Button";
-import Card from "../../UI/Card/Card";
+import { Layout } from "../Layout/index";
+import Button from "../Button/Button";
+import Card from "../Card/Card";
 
-import Firefox from "../../images/firefox.png";
-import Auba from "../../images/auba.png";
-import Crad from "../../images/crad.png";
-import Crypto from "../../images/crypto.png";
-import Simplicity from "../../images/simplicity.png";
+import Firefox from "../../../assets/images/firefox.png";
+import Auba from "../../../assets/images/auba.png";
+import Crad from "../../../assets/images/crad.png";
+import Crypto from "../../../assets/images/crypto.png";
+import Simplicity from "../../../assets/images/simplicity.png";
 
 import "./Home.css";
 
