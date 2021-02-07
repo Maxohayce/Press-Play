@@ -5,9 +5,9 @@ import './Nav.css';
 
 const navs = [
     { path: '/', name: 'Home' },
-    { path: '/create', name: 'Create Yours' },
-    { path: '/about', name:  'About' },
-    { path: '/listen', name: 'Listen'}
+    { path: '/about', name: 'About' },
+    { path: '/create', name:  'Create a Podcast' },
+    { path: '/listen', name: 'Listen to podcasts'}
 ]
 
 const Nav = (props) => (

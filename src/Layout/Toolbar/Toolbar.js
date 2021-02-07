@@ -11,12 +11,6 @@ const toolbar = (props) => (
         <Logo />
         <nav>
             <Nav />
-            <form>
-                <label for="search">Search</label>
-                <input type="text"></input>
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <Button btnType="Orange">Register</Button>
         </nav>
     </header>
 );

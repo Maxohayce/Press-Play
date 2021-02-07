@@ -30,18 +30,13 @@ h1 {
 section {
     margin: auto;
     align-content: center;
-    /* padding: 20px; */
-}
-
-span {
-    display: flex;
-    flex-direction: row;
 }
 
 .Icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .Button {
@@ -49,8 +44,15 @@ span {
     justify-content: space-around;
 }
 
+.Why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .Cards {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin: auto;
 }
@@ -73,5 +75,9 @@ h4 {
     margin: auto;
     outline: none;
     padding-bottom: 2%;
+}
+
+.Press {
+    color: #ffa500;
 }
 

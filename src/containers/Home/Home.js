@@ -2,21 +2,24 @@ import React from 'react';
 import { Layout } from '../../Layout/index';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
+import Icon from '../../components/Fontawesome/Icon';
 
 import Firefox from '../../images/firefox.png';
-import Auba from '../../images/auba.png';
-import Crad from '../../images/crad.png';
-import Crypto from '../../images/crypto.png';
-import Simplicity from '../../images/simplicity.png';
+import Banner from '../../images/banner.png';
+import Engage from '../../images/Engage.png';
+import Engage1 from '../../images/Engage-bottom.png';
 
-import './Home.css';
+import classes from './Home.module.css';
 
 
 const cards = [
-    {image: Auba, episode: 'E7', time: '12 mins', title: 'A Big Win?'},
-    {image: Crad, episode: 'E14', time: '5 mins', title: 'Idea Power'},
-    {image: Crypto, episode: 'E1', time: '10 mins', title: 'Taking Bitcoin'},
-    {image: Simplicity, episode: 'E7', time: '6 mins', title: 'Save the Planet'}
+    { title: 'Free Hosting & Distribution', body: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin'},
+    { title: 'Unlimited Access to Content', body: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin'},
+    { title: 'Unlimited Access to Content', body: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin'}
+]
+
+const icons = [
+    {className: 'fa fa-th', title: 'Headlines'}, {className: 'fa fa-thumbs-up', title: 'Politics'}, {className: 'fa fa-heart', title:'Relationships'}, {className: 'fa fa-dollar', title: 'Money'}
 ]
 
 class Home extends React.Component {
@@ -24,40 +27,39 @@ class Home extends React.Component {
         render() { 
             return (
                 <Layout>
-                    <section className="Background">
-                        <div className="Text">
-                            <h1>Press play and Listen to the World!</h1><br/>
-                            <div className="Button">
-                                <Button btnType="DarkHome" >Create Yours</Button>
+                    <section className={classes.Background}>
+                        <div className={classes.Text}>
+                            <h1><span className={classes.Press}>Press play</span> and Listen to the World!</h1><br/>
+                            <div className={classes.Button}>
+                                <Button btnType="Home" >Create Yours</Button>
                                 <Button btnType="Orange">Explore</Button>
                             </div>
                         </div>
                     </section>
-                    <section>
-                        <h4>Most Popular Topics</h4>
-                        <div className="Icons">
-                            <span >
-                                <i className="fa fa-th"></i><p>Headlines</p>
-                            </span>
-                            <span >
-                                <i className="fa fa-thumbs-up"></i><p>Politics</p>
-                            </span>
-                            <span ><i className="fa fa-heart"></i><p>Relationships</p></span>
-                            <span ><i className="fa fa-dollar"></i><p>Money</p></span>
+                    <section className={classes.Why}>
+                        <h4>Why <span className={classes.Press}>Press play</span></h4>
+                        <img alt="banner" src={Banner} />
+
+                        <div className={classes.Cards}>
+                            {cards.map((card, i) => {
+                                return < Card key={i} title={card.title} body={card.body} /> })}
                         </div>
-                    </section>
-                    <section>
-                        <h4>Top Podcast</h4>
-                        <div className="Cards">
-                            {cards.map((card, i) => (
-                                <Card key={i} image={card.image} episode={card.episode} time={card.time} title={card.title}/>
-                            ))}
+
+                        <h4>Find the Most Engaging Content on <span className={classes.Press}>PressPlay</span></h4>
+                        <img alt="Engage" src={Engage} />
+                        <img alt="Engage-bottom" src={Engage1} /> <br/>
+                        <div className={classes.Icons}>
+                            {icons.map((icon, i) => {
+                                return < Icon key={i} class={icon.className} title={icon.title} />
+                            })}
                         </div>
+                        <h4>Watch how <span className={classes.Press}>PressPlay</span> works</h4>
+                        <img className={classes.aboutImage} src={Firefox} alt="learn"/>
+                        <h4>Here's Why you'd love <span className={classes.Press}>PressPlay</span></h4>
                     </section>
-                    <section className="About">
-                        <h4>See how press play works</h4>
-                        <img className="aboutImage"src={Firefox} alt="learn"/>
-                    </section>
+                    
+                    
+                    
                 </Layout>
             );
         }

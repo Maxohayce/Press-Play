@@ -8,6 +8,7 @@
     margin: 10px;
     font-weight: bold;
     width: 20%;
+    border-radius: 16px;
 }
 
 
@@ -17,12 +18,12 @@
 }
 
 .DarkHome {
-    background-color: black;
     text-align: right;
 }
 
 .Dark {
-    background-color: black;
+    background: transparent;
+    border: 1px solid#FFA500;
 }
 
 .Orange {
