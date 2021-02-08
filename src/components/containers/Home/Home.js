@@ -1,8 +1,8 @@
 import React from 'react';
-import Testimonial from '../../components/Testimonial/Testimonial';
+import Testimonial from '../../presentational/Testimonial/Testimonial';
 
-import Testimonial1 from '../../images/Testimonial1.png';
-import Testimonial2 from '../../images/Testimonial2.png';
+import Testimonial1 from '../../../assets/images/Testimonial1.png';
+import Testimonial2 from '../../../assets/images/Testimonial2.png';
 import { Layout } from '../../presentational/Layout/index';
 import Button from '../../presentational/Button/Button';
 import Card from '../../presentational/Card/Card';
