@@ -3,11 +3,14 @@ import { Layout } from '../../Layout/index';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 import Icon from '../../components/Fontawesome/Icon';
+import Testimonial from '../../components/Testimonial/Testimonial';
 
 import Firefox from '../../images/firefox.png';
 import Banner from '../../images/banner.png';
 import Engage from '../../images/Engage.png';
 import Engage1 from '../../images/Engage-bottom.png';
+import Testimonial1 from '../../images/Testimonial1.png';
+import Testimonial2 from '../../images/Testimonial2.png';
 
 import classes from './Home.module.css';
 
@@ -20,6 +23,12 @@ const cards = [
 
 const icons = [
     {className: 'fa fa-th', title: 'Headlines'}, {className: 'fa fa-thumbs-up', title: 'Politics'}, {className: 'fa fa-heart', title:'Relationships'}, {className: 'fa fa-dollar', title: 'Money'}
+]
+
+const testimonials = [
+    { image: Testimonial1, name: 'Sarah Mong, London', title: 'PODCASTER OF "THE BEAUTY TALK" ', body: 'Pressplay has helped me share my voice with the world through my bi-weekly podcast. it’s amazing to find an audience that actually wants to engage with my content! '},
+    { image: Testimonial2, name: 'David Mong, Nigeria', title: 'PODCAST LISTENER', body: 'I’m a huge fan of pressplay because everytime I come on to the platfrom, it’s hard to leave. i get so engrossed by all the amazing podcast content on there!'},
+    
 ]
 
 class Home extends React.Component {
@@ -56,9 +65,13 @@ class Home extends React.Component {
                         <h4>Watch how <span className={classes.Press}>PressPlay</span> works</h4>
                         <img className={classes.aboutImage} src={Firefox} alt="learn"/>
                         <h4>Here's Why you'd love <span className={classes.Press}>PressPlay</span></h4>
+                        {testimonials.map((testimonial, i) => {
+                            return <Testimonial key={i} image={testimonial.image} name={testimonial.name} title={testimonial.title} body={testimonial.body}/>
+                        })}
                     </section>
+            
                     
-                    
+
                     
                 </Layout>
             );

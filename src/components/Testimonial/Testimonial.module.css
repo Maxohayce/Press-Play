@@ -1,0 +1,9 @@
+.Testimonial {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.Card {
+    width: 65%;
+}
