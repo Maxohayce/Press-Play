@@ -1,0 +1,26 @@
+[
+  {
+    "elementType": "input",
+    "label": "Email",
+    "type": "email",
+    "name": "email",
+    "id": "signUpEmail",
+    "example": "example@gmail.com"
+  },
+  {
+    "elementType": "input",
+    "label": "Username",
+    "type": "text",
+    "name": "username",
+    "id": "signUpUserName",
+    "example": "chidubem"
+  },
+  {
+    "elementType": "input",
+    "label": "Password",
+    "type": "password",
+    "name": "password",
+    "id": "signUpPassword",
+    "example": "Chidubem@1"
+  }
+]
