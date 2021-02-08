@@ -14,6 +14,7 @@ const Register = () => (
         link: "/login",
         linkText: "Login now",
       }}
+      shouldValidate={true}
     />
   </div>
 );
