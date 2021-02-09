@@ -6,6 +6,7 @@ import { createStore, combineReducers, applyMiddleware , compose } from 'redux';
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./index.css"
 
 const rootReducer = combineReducers({
 

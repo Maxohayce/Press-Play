@@ -3,7 +3,7 @@ import Testimonial from '../../presentational/Testimonial/Testimonial';
 
 import Testimonial1 from '../../../assets/images/Testimonial1.png';
 import Testimonial2 from '../../../assets/images/Testimonial2.png';
-import { Layout } from '../../presentational/Layout/index';
+import Layout from '../../presentational/Layout/index';
 import Button from '../../presentational/Button/Button';
 import Card from '../../presentational/Card/Card';
 import Icon from '../../presentational/Fontawesome/Icon';
@@ -37,7 +37,7 @@ class Home extends React.Component {
         render() { 
             return (
                 <Layout>
-                    <section className={classes.Background}>
+                    {/* <section className={classes.Background}>
                         <div className={classes.Text}>
                             <h1><span className={classes.Press}>Press play</span> and Listen to the World!</h1><br/>
                             <div className={classes.Button}>
@@ -69,7 +69,7 @@ class Home extends React.Component {
                         {testimonials.map((testimonial, i) => {
                             return <Testimonial key={i} image={testimonial.image} name={testimonial.name} title={testimonial.title} body={testimonial.body}/>
                         })}
-                    </section>
+                    </section> */}
             
                     
 

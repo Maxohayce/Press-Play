@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home, CreateYours, About, Listen } from "./components/containers";
 import Register from "./components/containers/Register";
 
+import "./app.css"
+
 const App = () => {
 
   return (

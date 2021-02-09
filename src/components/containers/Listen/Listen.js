@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from '../../presentational/Layout/index';
+import Layout  from '../../presentational/Layout/index';
 
 const Listen = () => (
     <Layout>
