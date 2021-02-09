@@ -1,6 +1,6 @@
 import Input from "../../../presentational/Input/Input";
 
-import classes from "./Field.css";
+import "./field.css";
 
 const Field = ({name, elementType, elementConfig, value, label, onChange, isValid}) => {
   let inputElement = null;
@@ -10,7 +10,7 @@ const Field = ({name, elementType, elementConfig, value, label, onChange, isVali
     case "textarea":
       inputElement = (
         <textarea
-          className={classes.InputElement}
+          className="InputElement"
           {...elementConfig}
           value={value}
         />
@@ -19,19 +19,19 @@ const Field = ({name, elementType, elementConfig, value, label, onChange, isVali
     default:
       inputElement = (
         <Input
-          classes={classes}
           elementConfig={elementConfig}
           value={value}
           placeholder={placeholder}
           onChange={onChange}
+          isValid={isValid}
         />
       );
   }
   return (
-    <div className={classes.Input}>
-      <label className={classes.Label} >{label}</label>
+    <div className="form-field">
+      <label className="form-label" >{label}</label>
       {inputElement}
-      {isValid === false && value && <span>{`Invalid ${name}`}</span>}
+      {isValid === false && value && <span className="form-error">{`Invalid ${name}`}</span>}
     </div>
   );
 };

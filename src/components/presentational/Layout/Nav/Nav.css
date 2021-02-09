@@ -1,6 +1,7 @@
 #header {
   background: transparent;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background: var(--white);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -17,7 +18,8 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  z-index: 3;
+  overflow: hidden;
 }
 
 .image--navbar-brand {
@@ -26,21 +28,23 @@
 
 .nav.nav--collapse {
   position: absolute;
-  width: 100%;
-  height: calc(100vh - 70px);
   top: -100vh;
   opacity: 0;
-  background: #fff;
+  background: var(--white);
 }
 
 .nav.nav--collapse.open {
   top: 0;
-  margin-top: 70px;
+  left: 0;
+  height: 100vh;
+  padding-top: 100px;
   overflow-y: auto;
   text-align: center;
   font-size: large;
   line-height: 2rem;
   opacity: 1;
+  width: 100%;
+  transform: scale(1.12);
 }
 
 .nav.nav--header {
@@ -67,9 +71,9 @@
   transform: scale(1.05);
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   #header {
-    background: transparent;
+    background: var(--transparent);
     box-shadow: none;
   }
 
@@ -95,6 +99,7 @@
     font-size: unset;
     line-height: unset;
     margin-left: auto;
+    background: unset;
   }
 
   .img-holder.img-holder--header {

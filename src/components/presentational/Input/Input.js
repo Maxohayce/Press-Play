@@ -1,6 +1,8 @@
-const Input = ({ classes, elementConfig, value, placeholder, onChange }) => (
+const Input = ({ isValid, elementConfig, value, placeholder, onChange }) => (
   <input
-    className={classes.InputElement}
+    className={`form-input ${
+      isValid === false && value && "border border-danger"
+    }`}
     placeholder={placeholder}
     {...elementConfig}
     value={value}

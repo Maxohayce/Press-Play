@@ -1,27 +1,34 @@
-.Input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+.form-field {
+  width: 100%;
+  padding: 10px;
 }
 
-.Label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--white);
 }
 
-.InputElement {
-    outline: none;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font: inherit;
-    padding: 6px 10px;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+.form-input {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  font: inherit;
+  padding: 6px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 10px;
 }
 
-.InputElement:focus {
-    outline: none;
-    background-color: #ccc;
+.form-input:focus {
+  /* outline: none; */
+  background-color: transparent;
+}
+
+.form-error {
+  color: var(--danger);
+  font-weight: 600;
 }

@@ -1,15 +1,13 @@
 import React from "react";
 
 import Footer from "./Footer/Footer";
-
-import classes from "./layout.css";
 import Nav from "./Nav";
 
-const Layout = (props) => (
+const Layout = ({children, withFooter}) => (
   <>
     <Nav />
-    <main className={classes.Content}>{props.children}</main>
-    {/* <Footer /> */}
+    <main className="container container--layout">{children}</main>
+    {withFooter && <Footer />}
   </>
 );
 

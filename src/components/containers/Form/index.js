@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { isValid } from "../../../assets/data/validate";
 import Field from "./Field/Field";
 
+import "./form.css";
+
 class Form extends Component {
   state = {
     fieldInputs: {},
@@ -47,12 +49,13 @@ class Form extends Component {
       Object.values(this.state.fieldInputs)
         .map(({ isValid }) => isValid)
         .filter((i) => i === false).length > 0;
-    const formIsComplete = Object.values(this.state.fieldInputs)
-    .map(({ value }) => value).length === fields.length
+    const formIsComplete =
+      Object.values(this.state.fieldInputs).map(({ value }) => value).length ===
+      fields.length;
 
     return (
-      <form onSubmit={this.submit}>
-        {title}
+      <form className="form" onSubmit={this.submit}>
+        <p className="form-title">{title}</p>
 
         {fields.map(({ id, elementType, label, name }) => (
           <Field
@@ -61,25 +64,43 @@ class Form extends Component {
             label={label}
             name={name}
             onChange={(e) => this.onChange(e, name)}
-            value={fieldInputs[name]?.value}
+            value={fieldInputs[name]?.value || ''}
             isValid={fieldInputs[name]?.isValid}
           />
         ))}
 
-        {buttons.map(
-          ({ value, id, type }) =>
-            ((type === "submit" && !formHasError && formIsComplete) || type !== "submit") && (
-              <button key={id} type={type}>
-                {value}
-              </button>
-            )
-        )}
+        <div className="form-button-group">
+          {buttons.map(({ value, id, type }) => (
+            <button
+              disabled={
+                !((type === "submit" && !formHasError && formIsComplete) ||
+                type !== "submit")
+              }
+              className="btn btn--primary"
+              key={id}
+              type={type}
+            >
+              {value}
+            </button>
+          ))}
+          {/* {buttons.map(
+            ({ value, id, type }) =>
+              ((type === "submit" && !formHasError && formIsComplete) ||
+                type !== "submit") && (
+                <button className="btn btn--primary" key={id} type={type}>
+                  {value}
+                </button>
+              )
+          )} */}
+        </div>
 
-        <p>
+        <p className="text-white">
           {alternate?.description}{" "}
           <Link to={alternate?.link}>{alternate?.linkText}</Link>
+          <br />
+          <br />
+          &copy; 2020 PressPlay Incorporated
         </p>
-        <p>&copy; 2020 PressPlay Incorporated</p>
       </form>
     );
   };
