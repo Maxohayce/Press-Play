@@ -1,0 +1,83 @@
+.Listen {
+    background: #393434;
+    color: white;
+}
+
+.listenTop {
+    display: flex;
+    flex-direction: row;
+    padding: 7%;
+    box-sizing: border-box;
+}
+
+.listenLeft {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.listenRight {
+    position: absolute;
+    width: 5.5em;
+    height: 704.21px;
+    left: 50%;
+    background: rgba(49, 49, 49, 0.582);
+    opacity: 0.6;
+    border-radius: 25px;
+}
+
+.Play {
+    display: flex;
+    flex-direction: row;
+}
+
+.Play h3{
+    padding-right: 2em;
+}
+
+.PlayButton {
+    border-radius: 50%;
+}
+
+.listenRight {
+    width: 40%;
+    box-sizing: border-box;
+    right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.listenRight h3{
+    text-align: center;
+}
+
+.Episodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Detail {
+    
+}
+
+.ProgressBar {
+    background-color: whiteSmoke;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;  
+    width: 250px;
+    height: 20px;
+    position: relative;
+    /* display: block; */
+  }
+    
+  /* .ProgressBar span {
+    background-color: blue;
+    border-radius: 2px;
+    display: block;
+    text-indent: -9999px;
+  } */

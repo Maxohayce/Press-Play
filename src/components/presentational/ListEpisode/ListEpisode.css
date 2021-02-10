@@ -1,0 +1,10 @@
+.listEpisode {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 70%;
+      padding: 16px;
+      border-bottom: 1px solid grey;
+      height: 4.3em;
+}

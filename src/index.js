@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
-
+  
 });
 
 const logger = store => {

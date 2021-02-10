@@ -41,7 +41,7 @@ class Home extends React.Component {
                         <div className={classes.Text}>
                             <h1><span className={classes.Press}>Press play</span> and Listen to the World!</h1><br/>
                             <div className={classes.Button}>
-                                <Button btnType="Home" >Create Yours</Button>
+                                <Button btnType="Dark" >Create Yours</Button>
                                 <Button btnType="Orange">Explore</Button>
                             </div>
                         </div>
@@ -69,6 +69,9 @@ class Home extends React.Component {
                         {testimonials.map((testimonial, i) => {
                             return <Testimonial key={i} image={testimonial.image} name={testimonial.name} title={testimonial.title} body={testimonial.body}/>
                         })}
+                        <div className={classes.getStarted}>
+                            <Button btnType="Orange" />
+                        </div>
                     </section>
             
                     
