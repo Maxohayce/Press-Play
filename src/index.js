@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import "./index.css"
 
 const rootReducer = combineReducers({
-
+  
 });
 
 const logger = store => {

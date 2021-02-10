@@ -73,6 +73,22 @@ class Home extends React.Component {
               <span className="text-primary">PressPlay</span> & listen to the
               world!
             </h1>
+            {/*             
+        render() { 
+            return (
+                <Layout>
+                    <section className={classes.Background}>
+                        <div className={classes.Text}>
+                            <h1><span className={classes.Press}>Press play</span> and Listen to the World!</h1><br/>
+                            <div className={classes.Button}>
+                                <Button btnType="Dark" >Create Yours</Button>
+                                <Button btnType="Orange">Explore</Button>
+                            </div>
+                        </div>
+                    </section>
+                    <section className={classes.Why}>
+                        <h4>Why <span className={classes.Press}>Press play</span></h4>
+                        <img alt="banner" src={Banner} /> */}
 
             <div className={btnGroup}>
               <Link
@@ -101,24 +117,45 @@ class Home extends React.Component {
           </article>
 
           <article className="bg-white p-5">
-              <div className="img-holder text-center">
-                <img src={micWithHeadset} alt="" className="img-fluid" />
-              </div>
-              <div className="d-flex flex-sm text-center">
-                {cards.map(({title, body}, i) => <div key={title+i} className="p-3">
+            <div className="img-holder text-center">
+              <img src={micWithHeadset} alt="" className="img-fluid" />
+            </div>
+            <div className="d-flex flex-sm text-center">
+              {cards.map(({ title, body }, i) => (
+                <div key={title + i} className="p-3">
                   <h4 className="text-primary large">{title}</h4>
                   <p>{body}</p>
-                </div>)}
-              </div>
+                </div>
+              ))}
+            </div>
           </article>
+          {/* <h4>Find the Most Engaging Content on <span className={classes.Press}>PressPlay</span></h4>
+                        <img alt="Engage" src={Engage} />
+                        <img alt="Engage-bottom" src={Engage1} /> <br/>
+                        <div className={classes.Icons}>
+                            {icons.map((icon, i) => {
+                                return < Icon key={i} class={icon.className} title={icon.title} />
+                            })}
+                        </div>
+                        <h4>Watch how <span className={classes.Press}>PressPlay</span> works</h4>
+                        <img className={classes.aboutImage} src={Firefox} alt="learn"/>
+                        <h4>Here's Why you'd love <span className={classes.Press}>PressPlay</span></h4>
+                        {testimonials.map((testimonial, i) => {
+                            return <Testimonial key={i} image={testimonial.image} name={testimonial.name} title={testimonial.title} body={testimonial.body}/>
+                        })}
+                        <div className={classes.getStarted}>
+                            <Button btnType="Orange" />
+                        </div>
+                    </section> */}
 
           <article className="p-5">
             <h3 className="text-center text-white x-large">
-              Find the most engaging podcast topics on<span className="text-primary"> PressPlay</span>
+              Find the most engaging podcast topics on
+              <span className="text-primary"> PressPlay</span>
             </h3>
             <div className="img-holder text-center">
-                <img src={laptopImg} className="img-fluid" alt="" />
-              </div>
+              <img src={laptopImg} className="img-fluid" alt="" />
+            </div>
           </article>
         </section>
         {/* <section className={classes.Background}>

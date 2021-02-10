@@ -17,15 +17,22 @@
     padding-left: 0;
 }
 
-.DarkHome {
-    text-align: right;
-}
 
 .Dark {
     background: transparent;
     border: 1px solid#FFA500;
+    color: #FFA500;
 }
 
 .Orange {
     background-color:#FFA500;
+}
+
+.Play {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    color: #FFA500;
 }
