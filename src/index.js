@@ -1,13 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware , compose } from 'redux';
+
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./index.css"
+
+const rootReducer = combineReducers({
+  
+});
+
+const logger = store => {
+  return next => {
+    return action => {
+      console.log('[Middleware] Dispatching', action);
+      const result = next(action);
+      console.log('[Middleware] next state', store.getState());
+      return result;
+    }
+  }
+};
+
+const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(logger)) );
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}><App /></Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

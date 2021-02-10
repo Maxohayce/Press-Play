@@ -1,0 +1,18 @@
+[
+  {
+    "elementType": "input",
+    "label": "Email",
+    "type": "email",
+    "name": "email",
+    "id": "loginEmail",
+    "example": "example@gmail.com"
+  },
+  {
+    "elementType": "input",
+    "label": "Password",
+    "type": "password",
+    "name": "password",
+    "id": "loginPassword",
+    "example": "Chidubem@1"
+  }
+]

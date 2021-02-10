@@ -1,0 +1,121 @@
+#header {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--white);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.container.container--header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.img-holder.img-holder--header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.image--navbar-brand {
+  width: 65px;
+}
+
+.nav.nav--collapse {
+  position: absolute;
+  top: -100vh;
+  opacity: 0;
+  background: var(--white);
+}
+
+.nav.nav--collapse.open {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 100px;
+  overflow-y: auto;
+  text-align: center;
+  font-size: large;
+  line-height: 2rem;
+  opacity: 1;
+  width: 100%;
+  transform: scale(1.12);
+}
+
+.nav.nav--header {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0;
+}
+
+.nav-item.nav-item--header {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.nav-link.nav-link--header {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-link.nav-link--header.active,
+.nav-link.nav-link--header:hover {
+  position: relative;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  #header {
+    background: var(--transparent);
+    box-shadow: none;
+  }
+
+  .container.container--header {
+    align-items: center;
+  }
+
+  .img-holder.img-holder--header {
+    width: fit-content;
+  }
+
+  .btn.btn--collapse {
+    display: none;
+  }
+
+  .nav.nav--collapse,
+  .nav.nav--collapse.open {
+    position: unset;
+    width: unset;
+    height: unset;
+    opacity: 1;
+    margin-top: 0;
+    font-size: unset;
+    line-height: unset;
+    margin-left: auto;
+    background: unset;
+  }
+
+  .img-holder.img-holder--header {
+    margin: unset;
+  }
+
+  .container.container--header,
+  .nav.nav--header {
+    flex-direction: row;
+  }
+
+  .nav.nav--header {
+    margin-left: auto;
+  }
+
+  .nav-item.nav-item--header {
+    margin: 5px 12.7px;
+  }
+}

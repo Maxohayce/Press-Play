@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/",
+    "name": "Home"
+  },
+  {
+    "path": "/about",
+    "name": "About"
+  },
+  {
+    "path": "/create",
+    "name": "Create a Podcast"
+  },
+  {
+    "path": "/listen",
+    "name": "Listen to podcasts"
+  }
+]

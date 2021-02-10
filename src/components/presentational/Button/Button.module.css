@@ -1,0 +1,38 @@
+.Button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    width: 20%;
+    border-radius: 16px;
+}
+
+
+.Button:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.Dark {
+    background: transparent;
+    border: 1px solid#FFA500;
+    color: #FFA500;
+}
+
+.Orange {
+    background-color:#FFA500;
+}
+
+.Play {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    color: #FFA500;
+}
