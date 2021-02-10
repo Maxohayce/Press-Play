@@ -6,7 +6,7 @@ import Nav from "./Nav";
 const Layout = ({children, withFooter}) => (
   <>
     <Nav />
-    <main className="container container--layout">{children}</main>
+    <main className="container--layout">{children}</main>
     {withFooter && <Footer />}
   </>
 );

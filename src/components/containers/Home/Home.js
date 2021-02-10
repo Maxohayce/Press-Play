@@ -9,11 +9,15 @@ import Card from "../../presentational/Card/Card";
 import Icon from "../../presentational/Fontawesome/Icon";
 
 import Firefox from "../../../assets/images/firefox.png";
-import Banner from "../../../assets/images/banner.png";
-import Engage from "../../../assets/images/Engage.png";
-import Engage1 from "../../../assets/images/Engage-bottom.png";
+import micWithHeadset from "../../../assets/images/mic-with-headset.png";
+import laptopImg from "../../../assets/images/laptop-with-podcasts.png";
 
 import classes from "./Home.module.css";
+import "./Home.module.css";
+import jumboImg from "../../../assets/images/singing-with-headset.png";
+
+import Backdrop from "../../presentational/Layout/Backdrop";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -59,9 +63,65 @@ const testimonials = [
 
 class Home extends React.Component {
   render() {
+    const { jumboText, btnGroup } = classes;
+
     return (
       <Layout>
-        <section className={classes.Background}>
+        <Backdrop backgroundImage={jumboImg} minHeight="85vh">
+          <div className={jumboText}>
+            <h1 className="text-white xx-large text-center">
+              <span className="text-primary">PressPlay</span> & listen to the
+              world!
+            </h1>
+
+            <div className={btnGroup}>
+              <Link
+                to="/register"
+                style={{ marginRight: "20px" }}
+                className="btn btn--primary"
+              >
+                Register
+              </Link>
+              <Link to="/login" className="btn btn--primary-outline">
+                Login
+              </Link>
+            </div>
+          </div>
+        </Backdrop>
+        <section
+          className="container-fluid bg-dark"
+          style={{
+            paddingTop: "94vh",
+          }}
+        >
+          <article className="p-5">
+            <h3 className="text-center text-white x-large">
+              Why <span className="text-primary"> PressPlay</span>?
+            </h3>
+          </article>
+
+          <article className="bg-white p-5">
+              <div className="img-holder text-center">
+                <img src={micWithHeadset} alt="" className="img-fluid" />
+              </div>
+              <div className="d-flex flex-sm text-center">
+                {cards.map(({title, body}, i) => <div key={title+i} className="p-3">
+                  <h4 className="text-primary large">{title}</h4>
+                  <p>{body}</p>
+                </div>)}
+              </div>
+          </article>
+
+          <article className="p-5">
+            <h3 className="text-center text-white x-large">
+              Find the most engaging podcast topics on<span className="text-primary"> PressPlay</span>
+            </h3>
+            <div className="img-holder text-center">
+                <img src={laptopImg} className="img-fluid" alt="" />
+              </div>
+          </article>
+        </section>
+        {/* <section className={classes.Background}>
           <div className={classes.Text}>
             <h1>
               <span className={classes.Press}>Press play</span> and Listen to
@@ -114,7 +174,7 @@ class Home extends React.Component {
               />
             );
           })}
-        </section>
+        </section> */}
       </Layout>
     );
   }

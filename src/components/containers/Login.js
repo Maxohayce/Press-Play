@@ -4,7 +4,7 @@ import Layout from "../presentational/Layout";
 
 // Util imports
 import fields from "../../assets/data/fields/login.json";
-import Backdrop from "../presentational/Layout/Backdrop/Backdrop";
+import Backdrop from "../presentational/Layout/Backdrop";
 
 import blackHeadset from "../../assets/images/black-headset.png"
 
