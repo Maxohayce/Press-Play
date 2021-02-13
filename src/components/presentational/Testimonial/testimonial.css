@@ -1,0 +1,25 @@
+.img--testimonial {
+  width: 150px;
+  top: 0;
+  left: 0;
+}
+
+.testimonial-body {
+  padding: 1.5rem 1rem 1rem;
+}
+
+@media (min-width: 576px) {
+  .img--testimonial {
+    width: 165px;
+  }
+
+  .testimonial-body {
+    padding-left: 10rem;
+    padding-right: 4rem;
+  }
+
+  .testimonial:nth-child(odd) .testimonial-body {
+    padding-right: 10rem;
+    padding-left: 4rem;
+  }
+}

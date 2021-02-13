@@ -1,14 +1,12 @@
 import React from "react";
 import Testimonial from "../../presentational/Testimonial/Testimonial";
 
-import Testimonial1 from "../../../assets/images/Testimonial1.png";
-import Testimonial2 from "../../../assets/images/Testimonial2.png";
 import Layout from "../../presentational/Layout/index";
 import Button from "../../presentational/Button/Button";
 import Card from "../../presentational/Card/Card";
 import Icon from "../../presentational/Fontawesome/Icon";
 
-import Firefox from "../../../assets/images/firefox.png";
+import podcasting from "../../../assets/images/podcasting.png";
 import micWithHeadset from "../../../assets/images/mic-with-headset.png";
 import laptopImg from "../../../assets/images/laptop-with-podcasts.png";
 
@@ -18,6 +16,9 @@ import jumboImg from "../../../assets/images/singing-with-headset.png";
 
 import Backdrop from "../../presentational/Layout/Backdrop";
 import { Link } from "react-router-dom";
+import genres from "../../../assets/data/genres";
+import testimonials from "../../../assets/data/testimonials";
+import Footer from "../../presentational/Layout/Footer/Footer";
 
 const cards = [
   {
@@ -42,23 +43,6 @@ const icons = [
   { className: "fa fa-thumbs-up", title: "Politics" },
   { className: "fa fa-heart", title: "Relationships" },
   { className: "fa fa-dollar", title: "Money" },
-];
-
-const testimonials = [
-  {
-    image: Testimonial1,
-    name: "Sarah Mong, London",
-    title: 'PODCASTER OF "THE BEAUTY TALK" ',
-    body:
-      "Pressplay has helped me share my voice with the world through my bi-weekly podcast. it’s amazing to find an audience that actually wants to engage with my content! ",
-  },
-  {
-    image: Testimonial2,
-    name: "David Mong, Nigeria",
-    title: "PODCAST LISTENER",
-    body:
-      "I’m a huge fan of pressplay because everytime I come on to the platfrom, it’s hard to leave. i get so engrossed by all the amazing podcast content on there!",
-  },
 ];
 
 class Home extends React.Component {
@@ -156,7 +140,62 @@ class Home extends React.Component {
             <div className="img-holder text-center">
               <img src={laptopImg} className="img-fluid" alt="" />
             </div>
+
+            <div className="d-flex flex-sm justify-content-center text-center my-5">
+              {genres.map(({ icon, name }, i) => (
+                <div key={name} className="mx-3 mb-2">
+                  <div className="img-holder">
+                    <img
+                      src={icon}
+                      alt={`${name}-genre`}
+                      className="img-fluid"
+                    />
+                  </div>
+                  <p className="text-white text-capitalize">{name}</p>
+                </div>
+              ))}
+            </div>
           </article>
+
+          <article>
+            <h3 className="text-center text-white x-large">
+              Watch how
+              <span className="text-primary"> PressPlay</span> works
+            </h3>
+
+            <div className="img-holder text-center">
+              <img src={podcasting} alt="Podcasting" className="img-fluid" />
+            </div>
+          </article>
+
+          <article className="p-4">
+            <h3 className="text-center text-white x-large mb-4">
+              Here's why you'd love
+              <span className="text-primary"> PressPlay</span>
+            </h3>
+
+            {testimonials.map((testimony, i) => (
+              <Testimonial key={i} isOdd={i % 2 === 1} testimony={testimony} />
+            ))}
+          </article>
+
+          <article className="position-relative">
+            <Backdrop backgroundImage={micWithHeadset} minHeight="400px">
+              <div
+                className="d-flex align-items-center"
+              >
+                <p>
+                  <Link to="/register" className="btn btn--primary">
+                    Get Started
+                  </Link>
+                </p>
+              </div>
+            </Backdrop>
+          </article>
+
+          <div style={{ clear: "both" }}></div>
+
+          <Footer />
         </section>
         {/* <section className={classes.Background}>
           <div className={classes.Text}>
