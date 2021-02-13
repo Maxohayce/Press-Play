@@ -2,6 +2,7 @@ import React from 'react';
 import Layout  from '../../presentational/Layout/index';
 import ListEpisode from '../../presentational/ListEpisode/ListEpisode';
 import Button from '../../presentational/Button/Button';
+import EpisodeCard from '../../presentational/EpisodeCards/EpisodeCard';
 
 import listenImage from '../../../assets/images/listen.png';
 import episode from '../../../assets/images/episode.png';
@@ -112,7 +113,7 @@ class Listen extends React.Component {
     }
 
     componentWillUnmount() {
-        var $player = $('#' + this.props.id);
+        var $player = ('#' + this.props.id);
         $player.off('play');
         $player.off('pause');
         (document).off('keydown')
@@ -132,7 +133,7 @@ class Listen extends React.Component {
                     })}
                     <h4>Trending Podcasts for the Week</h4>
                     {episodeCards.map((episodeCard, i) => {
-                        return 
+                        return <EpisodeCard />
                     })}
                 </section>
                 <section className={Listen}>
