@@ -1,0 +1,31 @@
+.body{
+    background-color: #393434;
+    height: 1040px;
+}
+.acct{
+    position: absolute;
+    top: 160px;
+    left: 300px;
+    color: white;
+}
+.dashboard{
+    position: absolute;
+    top: 160px;
+    left: 850px;
+    color: white;
+
+}
+.dashtab{
+    background-color: white;
+    height: 200px;
+    width: 810px;
+    position: absolute;
+    top: 220px;
+    left: 280px;
+    border-radius: 9px;
+}
+.divider{
+    border-left: 3px solid black;
+    height: 9px;
+    
+}
