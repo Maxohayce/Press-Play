@@ -1,6 +1,6 @@
 import Input from "../../../presentational/Input/Input";
 
-import "./field.css";
+import "./Field.css";
 
 const Field = ({name, elementType, elementConfig, value, label, onChange, isValid}) => {
   let inputElement = null;
