@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Component } from "react";
 
 // Style imports
-import "./nav.css";
+import "./Nav.css";
 import logo from "../../../../assets/images/logo.png";
 
 // Asset imports
