@@ -1,9 +1,11 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
+
+import Logo from '../../../assets/images/logo.png';
+import './podcastImages.css';
 
 const episodeCard = (props) => (
     <div className={props.image}>
-        <Logo />
+        <img alt="Logo" src={Logo} />
     </div>
 );
 
