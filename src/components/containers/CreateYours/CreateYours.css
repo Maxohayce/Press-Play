@@ -1,6 +1,6 @@
 .body{
     background-color: #393434;
-    height: 1040px;
+    height: 800px;
 }
 .acct{
     position: absolute;
@@ -15,6 +15,13 @@
     color: white;
 
 }
+.underline{
+    border-bottom: 1px solid #FFA500;
+    width: 117px;
+    position: absolute;
+    top: 189px;
+    left: 859px;
+}
 .dashtab{
     background-color: white;
     height: 200px;
@@ -22,10 +29,162 @@
     position: absolute;
     top: 220px;
     left: 280px;
-    border-radius: 9px;
-}
-.divider{
-    border-left: 3px solid black;
-    height: 9px;
+    border-radius: 12px;
+    display: flex;
     
+}
+.dividerOne{
+    border-left: 1px solid black;
+    height: 90px;
+    position: absolute;
+    left: 290px;
+    top: 40px;
+    
+}
+.dividerTwo{
+    border-left: 1px solid black;
+    height: 90px;
+    position: absolute;
+    left: 510px;
+    top: 40px;
+}
+.sub{
+     padding-top: 60px;
+     padding-left: 150px;
+}
+.onekay{
+    color: #FFA500;
+    font-weight: 700;
+    font-size: 40px;
+}
+.fivekay{
+    color: #FFA500;
+    font-weight: 700;
+    font-size: 40px;
+}
+.elevenkay{
+    color: #FFA500;
+    font-weight: 700;
+    font-size: 40px;
+}
+.outter{
+    background-color: #ffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 500px;
+    left: 380px;
+
+}
+.inner{
+    background-color: #FFA500;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: relative;
+    top: 12px;
+    left: 12px;
+    cursor: pointer;
+}
+.uploadOutter{
+    background-color: #ffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 500px;
+    left: 910px;
+}
+.uploadInner{
+    background-color: #FFA500;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+}
+.record{
+    color: #FFA500;
+    position: absolute;
+    top: 560px;
+    left: 350px;
+}
+.upload{
+    color: #FFA500;
+    position: absolute;
+    top: 560px;
+    left: 885px;
+}
+.dubem{
+    color: #ffff;
+    position: absolute;
+    top: 280px;
+    left: 440px;
+    font-size: 20px;
+}
+.editPodcast{
+    color: #FFA500;
+    position: absolute;
+    top: 289px;
+    left: 520px;
+    font-size: 12px;
+}
+.divider2{
+    border-left: 1px solid #ffff;
+    height: 40px;
+    position: absolute;
+    left: 650px;
+    top: 280px;
+}
+.dubz{
+    color: #ffff;
+    position: absolute;
+    top: 290px;
+    left: 770px;
+    font-size: 20px;
+}
+.dubz-pix{
+    position: absolute;
+    top: 240px;
+    left: 290px;
+    border-radius: 50%;
+}
+.editPodcast2{
+    color: #FFA500;
+    position: absolute;
+    top: 296px;
+    left: 1010px;
+    font-size: 12px;
+}
+.accttab{
+    background-color: white;
+    height: 170px;
+    width: 790px;
+    position: absolute;
+    top: 370px;
+    left: 280px;
+    border-radius: 12px;
+    display: flex;
+}
+.tabs{
+    padding-top: 60px;
+    padding-left: 110px;
+}
+.published{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;   
+}
+.drafts{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;   
+}
+.settings{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;   
 }
