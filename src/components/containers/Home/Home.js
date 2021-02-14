@@ -170,7 +170,7 @@ class Home extends React.Component {
             </div>
           </article>
 
-          <article className="p-4">
+          <article className="p-4 container">
             <h3 className="text-center text-white x-large mb-4">
               Here's why you'd love
               <span className="text-primary"> PressPlay</span>

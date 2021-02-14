@@ -17,7 +17,7 @@ const Testimonial = ({ isOdd, testimony }) => (
   <div
     className={`my-5 text-center d-flex flex-sm ${
       isOdd && "flex-sm-row-reverse"
-    } align-items-center testimonial`}
+    } align-items-center testimonial`} style={{margin: "100px 0px"}}
   >
     <div className="img-holder p-4 p-sm-0 position-sm-absolute">
       <img
