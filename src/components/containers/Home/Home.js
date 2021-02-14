@@ -20,6 +20,8 @@ import genres from "../../../assets/data/genres";
 import testimonials from "../../../assets/data/testimonials";
 import Footer from "../../presentational/Layout/Footer/Footer";
 
+import angle141 from "../../../assets/images/angle141.png"
+
 const cards = [
   {
     title: "Free Hosting & Distribution",
@@ -179,11 +181,12 @@ class Home extends React.Component {
             ))}
           </article>
 
-          <article className="position-relative">
-            <Backdrop backgroundImage={micWithHeadset} minHeight="400px">
-              <div
-                className="d-flex align-items-center"
-              >
+          <article
+            className="position-relative"
+            style={{ minHeight: "400px" }}
+          >
+            <Backdrop backgroundImage={angle141} minHeight="400px">
+              <div className="d-flex align-items-center">
                 <p>
                   <Link to="/register" className="btn btn--primary">
                     Get Started
@@ -192,9 +195,6 @@ class Home extends React.Component {
               </div>
             </Backdrop>
           </article>
-
-          <div style={{ clear: "both" }}></div>
-
           <Footer />
         </section>
         {/* <section className={classes.Background}>
