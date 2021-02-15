@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Press-Play/static/css/main.d66589a2.chunk.css",
+    "main.js": "/Press-Play/static/js/main.e2e44474.chunk.js",
+    "main.js.map": "/Press-Play/static/js/main.e2e44474.chunk.js.map",
+    "runtime-main.js": "/Press-Play/static/js/runtime-main.fd12f3c4.js",
+    "runtime-main.js.map": "/Press-Play/static/js/runtime-main.fd12f3c4.js.map",
+    "static/js/2.110507ed.chunk.js": "/Press-Play/static/js/2.110507ed.chunk.js",
+    "static/js/2.110507ed.chunk.js.map": "/Press-Play/static/js/2.110507ed.chunk.js.map",
+    "static/js/3.1d1eae16.chunk.js": "/Press-Play/static/js/3.1d1eae16.chunk.js",
+    "static/js/3.1d1eae16.chunk.js.map": "/Press-Play/static/js/3.1d1eae16.chunk.js.map",
+    "index.html": "/Press-Play/index.html",
+    "static/css/main.d66589a2.chunk.css.map": "/Press-Play/static/css/main.d66589a2.chunk.css.map",
+    "static/js/2.110507ed.chunk.js.LICENSE.txt": "/Press-Play/static/js/2.110507ed.chunk.js.LICENSE.txt",
+    "static/media/Testimonial1.318276ba.png": "/Press-Play/static/media/Testimonial1.318276ba.png",
+    "static/media/Testimonial2.381b6b0d.png": "/Press-Play/static/media/Testimonial2.381b6b0d.png",
+    "static/media/angle135.e3014db9.png": "/Press-Play/static/media/angle135.e3014db9.png",
+    "static/media/angle136.97c1446e.png": "/Press-Play/static/media/angle136.97c1446e.png",
+    "static/media/angle137.f1a8be9f.png": "/Press-Play/static/media/angle137.f1a8be9f.png",
+    "static/media/angle138.bc787ab8.png": "/Press-Play/static/media/angle138.bc787ab8.png",
+    "static/media/angle139.94c1fdf0.png": "/Press-Play/static/media/angle139.94c1fdf0.png",
+    "static/media/angle141.42b1c193.png": "/Press-Play/static/media/angle141.42b1c193.png",
+    "static/media/angle142.5265a5b4.png": "/Press-Play/static/media/angle142.5265a5b4.png",
+    "static/media/angle144.47bd7bf7.png": "/Press-Play/static/media/angle144.47bd7bf7.png",
+    "static/media/angle145.b05eaa77.png": "/Press-Play/static/media/angle145.b05eaa77.png",
+    "static/media/angle146.5d704c4e.png": "/Press-Play/static/media/angle146.5d704c4e.png",
+    "static/media/Home.module.css": "/Press-Play/static/media/background.56adbcbc.png",
+    "static/media/black-headset.887c53cb.png": "/Press-Play/static/media/black-headset.887c53cb.png",
+    "static/media/episode.e9acdb3f.png": "/Press-Play/static/media/episode.e9acdb3f.png",
+    "static/media/laptop-with-podcasts.61f3a0ac.png": "/Press-Play/static/media/laptop-with-podcasts.61f3a0ac.png",
+    "static/media/listen.7b823020.png": "/Press-Play/static/media/listen.7b823020.png",
+    "static/media/mic-with-headset.fdadac55.png": "/Press-Play/static/media/mic-with-headset.fdadac55.png",
+    "static/media/podcasting.dbd38538.png": "/Press-Play/static/media/podcasting.dbd38538.png",
+    "static/media/singing-with-headset.d70f9ab0.png": "/Press-Play/static/media/singing-with-headset.d70f9ab0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd12f3c4.js",
+    "static/js/2.110507ed.chunk.js",
+    "static/css/main.d66589a2.chunk.css",
+    "static/js/main.e2e44474.chunk.js"
+  ]
+}
