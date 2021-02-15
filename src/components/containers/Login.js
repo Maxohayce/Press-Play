@@ -6,7 +6,13 @@ import Layout from "../presentational/Layout";
 import fields from "../../assets/data/fields/login.json";
 import Backdrop from "../presentational/Layout/Backdrop";
 
-import blackHeadset from "../../assets/images/black-headset.png"
+import blackHeadset from "../../assets/images/black-headset.png";
+
+import firebase from 'firebase/app';
+
+import {AuthField} from './authfield.js';
+
+import {signInWithEmailAndPasswordHandler} from '../../redux/actions/firebase/firebase'
 
 const Login = () => (
   <Layout>
@@ -14,7 +20,11 @@ const Login = () => (
       <Form
         title="Log in to PressPlay"
         fields={fields}
-        onSubmit={(fieldInputs) => console.log(fieldInputs)}
+        onSubmit={(fieldInputs) => {
+          let authData = new AuthField(fieldInputs.email.value, 'Hearts', fieldInputs.password.value);
+          signInWithEmailAndPasswordHandler(authData);
+
+        }}
         buttons={[{ value: "Login", id: "loginBtn", type: "submit" }]}
         alternate={{
           description: "Don't have an account? ",

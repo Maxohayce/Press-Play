@@ -1,0 +1,12 @@
+.Testimonial {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+}
+
+.Card {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

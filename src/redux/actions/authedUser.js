@@ -1,3 +1,7 @@
+// Module imports
+import firebase from 'firebase/app';
+
+
 // Type imports
 import {SET_AUTHED_USER, UNSET_AUTHED_USER} from './types';
 
@@ -12,4 +16,4 @@ export const unsetAuthedUser = () => ({type: UNSET_AUTHED_USER});
  * @param {id} userID - ID of user to login
  * @return {action} - The action to dispatch
  */
-export const setAuthedUser = (userID) => ({type: SET_AUTHED_USER, userID});
+export const setAuthedUser = (user) => ({type: SET_AUTHED_USER, user});
