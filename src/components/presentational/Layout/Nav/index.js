@@ -1,6 +1,7 @@
 // Module imports
 import { NavLink } from "react-router-dom";
 import { Component } from "react";
+import { connect } from "react-redux";
 
 // Style imports
 import "./Nav.css";
@@ -32,7 +33,14 @@ class Nav extends Component {
         </div>
         <nav className={`nav nav--collapse ${this.state.navXtraClassName}`}>
           <ul className="nav nav--header">
-            {navLinks.map((navItem, i) => (
+            {(this.props.isAuthed
+              ? navLinks.filter(
+                  ({ isAuthed }) => isAuthed || isAuthed === undefined
+                )
+              : navLinks.filter(
+                  ({ isAuthed }) => !isAuthed || isAuthed === undefined
+                )
+            ).map((navItem, i) => (
               <li key={i} className="nav-item nav-item--header">
                 <NavLink
                   exact
@@ -51,4 +59,6 @@ class Nav extends Component {
   );
 }
 
-export default Nav;
+const mapStateToProps = ({ isAuthed }) => ({ isAuthed });
+
+export default connect(mapStateToProps)(Nav);

@@ -2,18 +2,23 @@ import Input from "../../../presentational/Input/Input";
 
 import "./Field.css";
 
-const Field = ({name, elementType, elementConfig, value, label, onChange, isValid}) => {
+const Field = ({
+  name,
+  elementType,
+  elementConfig,
+  value,
+  label,
+  onChange,
+  isValid,
+  placeholder,
+}) => {
   let inputElement = null;
-  let placeholder=`Enter your ${name}`;
+  placeholder = placeholder || `Enter your ${name}`;
 
   switch (elementType) {
     case "textarea":
       inputElement = (
-        <textarea
-          className="InputElement"
-          {...elementConfig}
-          value={value}
-        />
+        <textarea className="InputElement" {...elementConfig} value={value} />
       );
       break;
     default:
@@ -29,9 +34,11 @@ const Field = ({name, elementType, elementConfig, value, label, onChange, isVali
   }
   return (
     <div className="form-field">
-      <label className="form-label" >{label}</label>
+      <label className="form-label">{label}</label>
       {inputElement}
-      {isValid === false && value && <span className="form-error">{`Invalid ${name}`}</span>}
+      {isValid === false && value && (
+        <span className="form-error">{`Invalid ${name}`}</span>
+      )}
     </div>
   );
 };

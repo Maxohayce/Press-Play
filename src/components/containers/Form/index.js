@@ -43,7 +43,7 @@ class Form extends Component {
     );
 
   render = () => {
-    const { title, fields, buttons, alternate } = this.props;
+    const { className, title, fields, buttons, alternate } = this.props;
     const { fieldInputs } = this.state;
     const formHasError =
       Object.values(this.state.fieldInputs)
@@ -54,53 +54,51 @@ class Form extends Component {
       fields.length;
 
     return (
-      <form className="form" onSubmit={this.submit}>
+      <form className={`form ${className}`} onSubmit={this.submit}>
         <p className="form-title">{title}</p>
 
-        {fields.map(({ id, elementType, label, name }) => (
+        {fields.map(({ id, elementType, label, name, placeholder }) => (
           <Field
             key={id}
             elementType={elementType}
             label={label}
             name={name}
             onChange={(e) => this.onChange(e, name)}
-            value={fieldInputs[name]?.value || ''}
+            value={fieldInputs[name]?.value || ""}
             isValid={fieldInputs[name]?.isValid}
+            placeholder={placeholder}
           />
         ))}
 
-        <div className="form-button-group">
-          {buttons.map(({ value, id, type }) => (
-            <button
-              disabled={
-                !((type === "submit" && !formHasError && formIsComplete) ||
-                type !== "submit")
-              }
-              className="btn btn--primary"
-              key={id}
-              type={type}
-            >
-              {value}
-            </button>
-          ))}
-          {/* {buttons.map(
-            ({ value, id, type }) =>
-              ((type === "submit" && !formHasError && formIsComplete) ||
-                type !== "submit") && (
-                <button className="btn btn--primary" key={id} type={type}>
-                  {value}
-                </button>
-              )
-          )} */}
-        </div>
+        {buttons && (
+          <div className="form-button-group">
+            {buttons.map(({ value, id, type }) => (
+              <button
+                disabled={
+                  !(
+                    (type === "submit" && !formHasError && formIsComplete) ||
+                    type !== "submit"
+                  )
+                }
+                className="btn btn--primary"
+                key={id}
+                type={type}
+              >
+                {value}
+              </button>
+            ))}
+          </div>
+        )}
 
-        <p className="text-white">
-          {alternate?.description}{" "}
-          <Link to={alternate?.link}>{alternate?.linkText}</Link>
-          <br />
-          <br />
-          &copy; 2020 PressPlay Incorporated
-        </p>
+        {alternate && (
+          <p className="text-white">
+            {alternate?.description}{" "}
+            <Link to={alternate?.link}>{alternate?.linkText}</Link>
+            <br />
+            <br />
+            &copy; 2020 PressPlay Incorporated
+          </p>
+        )}
       </form>
     );
   };

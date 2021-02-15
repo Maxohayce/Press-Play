@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../presentational/Layout/index';
 import './About.css';
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie'
 import animationData from '../../../assets/LottieFiles/construction.json';
 
 const About = () => {

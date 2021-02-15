@@ -1,0 +1,10 @@
+[
+  {
+    "elementType": "input",
+    "type": "search",
+    "name": "search",
+    "id": "searchText",
+    "example": "money",
+    "placeholder": "Search for podcasts"
+  }
+]

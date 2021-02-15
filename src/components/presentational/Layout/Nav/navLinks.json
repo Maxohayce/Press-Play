@@ -9,10 +9,22 @@
   },
   {
     "path": "/create",
-    "name": "Create a Podcast"
+    "name": "Create a Podcast",
+    "isAuthed": false
   },
   {
     "path": "/listen",
-    "name": "Listen to podcasts"
+    "name": "Listen to podcasts",
+    "isAuthed": false
+  },
+  {
+    "path": "/support",
+    "name": "Support",
+    "isAuthed": true
+  },
+  {
+    "path": "/notifications",
+    "name": "#notifications",
+    "isAuthed": true
   }
 ]

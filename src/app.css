@@ -83,6 +83,10 @@ a.active {
   color: var(--white);
 }
 
+.column-1 {
+  flex: 1 1 100%;
+}
+
 .column-2 {
   flex: 1 1 50%;
 }
@@ -115,8 +119,9 @@ a.active {
 }
 
 .img-fluid {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .img-holder {
@@ -403,6 +408,10 @@ a.active {
   padding: 0;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
 .x-large {
   font-size: x-large;
 }
@@ -421,7 +430,7 @@ a.active {
 
 @media (min-width: 576px) {
   .column-sm-2 {
-    flex: 1 1 50%;
+    flex: 1 1 42%;
   }
 
   .column-sm-3 {
@@ -482,6 +491,36 @@ a.active {
 
   .mt-sm-0 {
     margin-top: 0;
+  }
+
+  .mx-sm-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .mx-sm-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .mx-sm-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .mx-sm-3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .mx-sm-4 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .mx-sm-5 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .p-sm-0 {
@@ -547,7 +586,7 @@ a.active {
 
 @media (min-width: 768px) {
   .column-md-3 {
-    flex: 1 1 33.33%;
+    flex: 1 1 31%;
   }
 
   .container {
@@ -561,7 +600,7 @@ a.active {
 
 @media (min-width: 992px) {
   .column-lg-4 {
-    flex: 1 1 25%;
+    flex: 1 1 22%;
   }
 
   .container {
