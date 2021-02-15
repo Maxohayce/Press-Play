@@ -1,0 +1,19 @@
+.body{
+    background-color:  #393434;
+    height: 700px;
+}
+.oops{
+    color: white;
+    position: absolute;
+    top: 440px;
+    left: 390px;
+    font-size: 36px;
+}
+.sorry{
+    color: #FFA500;
+    position: absolute;
+    top: 490px;
+    left: 480px;
+    font-size: 20px;
+
+}
