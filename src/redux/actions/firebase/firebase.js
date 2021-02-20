@@ -60,6 +60,7 @@ export const createUserWithEmailAndPasswordHandler = async (authData) => {
           username: username,
         })
         .then((res) => {
+          setAuthedUser(createdUser);
           // if (createdUser) Auth.setLoggedIn(true);
         });
     })
@@ -76,6 +77,7 @@ export const signInWithEmailAndPasswordHandler = async (authData) => {
   auth
     .signInWithEmailAndPassword(email, password)
     .then((res) => {
+      setAuthedUser(res.user);
       // if (res.user) Auth.setLoggedIn(true);
     })
     .catch((e) => {

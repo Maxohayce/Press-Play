@@ -9,9 +9,13 @@ import Login from "./components/containers/Login";
 
 import "./app.css";
 import { checkIfAuthed } from "./redux/actions/firebase/firebase";
+import { fetchPodcasts } from "./redux/actions/podcasts";
 
 class App extends Component {
-  componentDidMount = () => this.props.checkIfAuthed();
+  componentDidMount = () => {
+    this.props.checkIfAuthed();
+    this.props.fetchPodcasts();
+  };
 
   render = () => {
     return (
@@ -42,4 +46,4 @@ class App extends Component {
   };
 }
 
-export default connect(null, { checkIfAuthed })(App);
+export default connect(null, { checkIfAuthed, fetchPodcasts })(App);

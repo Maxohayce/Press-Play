@@ -22,6 +22,8 @@ import ep12 from "../../../assets/images/angle146.png";
 import classes from "./Listen.module.css";
 import Form from "../../containers/Form";
 import fields from "../../../assets/data/fields/search.json";
+import { connect } from "react-redux";
+import { getGenres } from "../../../redux/selectors";
 
 const listEpisodes = [
   { title: "All About Rocketez", time: "05:00mins" },
@@ -156,6 +158,9 @@ class Listen extends React.Component {
       listenBottom,
       ProgressBar,
     } = classes;
+
+    console.log(this.props);
+
     return (
       <Layout>
         <section className="pt-5 bg-dark text-white">
@@ -181,8 +186,8 @@ class Listen extends React.Component {
             </article>
             <h2 className="x-large my-4">Trending Podcasts for the Week</h2>
             <article className="d-flex flex-wrap">
-              {episodeCards.map(({ src, name }, i) => (
-                <EpisodeCard src={src} key={name} />
+              {this.props.podcasts.map(({ image, title }, i) => (
+                <EpisodeCard src={image} key={title} />
               ))}
             </article>
           </article>
@@ -258,4 +263,6 @@ class Listen extends React.Component {
   }
 }
 
-export default Listen;
+const mapStateToProps = ({podcasts}) => ({podcasts, genres: getGenres() })
+
+export default connect(mapStateToProps)(Listen);
