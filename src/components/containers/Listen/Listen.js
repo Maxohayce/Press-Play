@@ -18,6 +18,7 @@ import ep9 from "../../../assets/images/angle143.png";
 import ep10 from "../../../assets/images/angle144.png";
 import ep11 from "../../../assets/images/angle145.png";
 import ep12 from "../../../assets/images/angle146.png";
+import Logo from "../../../assets/images/logo.png";
 
 import classes from "./Listen.module.css";
 import Form from "../../containers/Form";
@@ -75,7 +76,6 @@ const episodeCards = [
 class Listen extends React.Component {
   State = {
     player: false,
-    currentTime: "",
   };
 
   rewind = () => {
@@ -86,66 +86,7 @@ class Listen extends React.Component {
     this.setState.player.currentTime += 1;
   };
 
-  componentDidMount() {
-    var $player = ".player";
-
-    // $player.on("play", (e) => {
-    //   e.preventDefault();
-    //   this.playLocation();
-    // });
-
-    // $player.on("pause", (e) => {
-    //   e.preventDefault();
-    //   this.pause();
-    // });
-
-    // $player.on("ended", (e) => {
-    //   e.preventDefault();
-    //   this.ended();
-    // });
-
-    // $player.on("rewind", (e) => {
-    //   e.preventDefault();
-    //   this.rewind();
-    // });
-
-    // $player
-    //   .on("fastForward", (e) => {
-    //     e.preventDefault();
-    //     this.fastForward();
-    //   })(
-    //     //Move currentTime forward and backward via arrow keys and play/pause via spaceBar
-    //     document
-    //   )
-    //   .on("keydown", (e) => {
-    //     switch (e) {
-    //       case e.keyCode === 39:
-    //         this.fastForward();
-    //         break;
-    //       case e.keyCode === 37:
-    //         this.rewind();
-    //         break;
-    //       case e.keyCode === 32 && this.state.player.paused === true:
-    //         e.preventDefault();
-    //         this.state.player.play();
-    //         break;
-    //       case e.keyCode === 32 && this.state.player.paused === false:
-    //         e.preventDefault();
-    //         this.player.setState.pause();
-    //         break;
-    //       default:
-    //       // code block
-    //     }
-    //   });
-  }
-
-  componentWillUnmount() {
-    // var $player = "#" + this.props.id;
-    // $player.off("play");
-    // $player.off("pause");
-    // document.off("keydown");
-    // $player.off("wheel");
-  }
+ 
 
   render() {
     const {
@@ -192,7 +133,7 @@ class Listen extends React.Component {
             </article>
           </article>
         </section>
-        {/* <section className={Listen}>
+        <section className={Listen}>
           <div className={listenTop}>
             <div className={listenLeft}>
               <img alt="Episode" src={listenImage} />
@@ -257,7 +198,7 @@ class Listen extends React.Component {
               <span style={{ width: "80%" }}>Progress: 80%</span>
             </progress>
           </div>
-        </section> */}
+        </section>
       </Layout>
     );
   }
