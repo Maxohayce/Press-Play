@@ -25,6 +25,7 @@ import Form from "../../containers/Form";
 import fields from "../../../assets/data/fields/search.json";
 import { connect } from "react-redux";
 import { getGenres } from "../../../redux/selectors";
+import { Link } from "react-router-dom";
 
 const listEpisodes = [
   { title: "All About Rocketez", time: "05:00mins" },
@@ -74,20 +75,6 @@ const episodeCards = [
 ];
 
 class Listen extends React.Component {
-  State = {
-    player: false,
-  };
-
-  rewind = () => {
-    this.setState.player.currentTime -= 1;
-  };
-
-  fastForward = () => {
-    this.setState.player.currentTime += 1;
-  };
-
- 
-
   render() {
     const {
       Listen,
@@ -99,8 +86,6 @@ class Listen extends React.Component {
       listenBottom,
       ProgressBar,
     } = classes;
-
-    console.log(this.props);
 
     return (
       <Layout>
@@ -128,12 +113,12 @@ class Listen extends React.Component {
             <h2 className="x-large my-4">Trending Podcasts for the Week</h2>
             <article className="d-flex flex-wrap">
               {this.props.podcasts.map(({ image, title }, i) => (
-                <EpisodeCard src={image} key={title} />
+                 <EpisodeCard src={image} key={title} />
               ))}
             </article>
           </article>
         </section>
-        <section className={Listen}>
+        {/* <section className={Listen}>
           <div className={listenTop}>
             <div className={listenLeft}>
               <img alt="Episode" src={listenImage} />
@@ -198,12 +183,12 @@ class Listen extends React.Component {
               <span style={{ width: "80%" }}>Progress: 80%</span>
             </progress>
           </div>
-        </section>
+        </section> */}
       </Layout>
     );
   }
 }
 
-const mapStateToProps = ({podcasts}) => ({podcasts, genres: getGenres() })
+const mapStateToProps = ({ podcasts }) => ({ podcasts, genres: getGenres() });
 
 export default connect(mapStateToProps)(Listen);
